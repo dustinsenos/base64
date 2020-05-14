@@ -29,7 +29,7 @@
 		throw new InvalidCharacterError(message);
 	};
 
-	var TABLE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
+	var TABLE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
 	// http://whatwg.org/html/common-microsyntaxes.html#space-character
 	var REGEX_SPACE_CHARACTERS = /<%= spaceCharacters %>/g;
 
