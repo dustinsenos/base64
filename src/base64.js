@@ -28,8 +28,10 @@
 		// the native `atob`/`btoa` implementation in Chromium.
 		throw new InvalidCharacterError(message);
 	};
-
-	var TABLE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
+	
+	// Mirroring firebase's push ids so they're sorted lexicographically
+	// https://firebase.googleblog.com/2015/02/the-2120-ways-to-ensure-unique_68.html
+	var TABLE = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
 	// http://whatwg.org/html/common-microsyntaxes.html#space-character
 	var REGEX_SPACE_CHARACTERS = /<%= spaceCharacters %>/g;
 
